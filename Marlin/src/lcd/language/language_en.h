@@ -595,7 +595,7 @@ namespace Language_en {
   PROGMEM Language_Str MSG_DAC_PERCENT_I                   = AXIS4_STR _UxGT(" Driver %");
   PROGMEM Language_Str MSG_DAC_PERCENT_J                   = AXIS5_STR _UxGT(" Driver %");
   PROGMEM Language_Str MSG_DAC_PERCENT_K                   = AXIS6_STR _UxGT(" Driver %");
-  PROGMEM Language_Str MSG_DAC_PERCENT_E                   = _UxGT("E Driver %");
+  PROGMEM Language_Str  MSG_DAC_PERCENT_E                   = _UxGT("E Driver %");
   PROGMEM Language_Str MSG_ERROR_TMC                       = _UxGT("TMC CONNECTION ERROR");
   PROGMEM Language_Str MSG_DAC_EEPROM_WRITE                = _UxGT("DAC EEPROM Write");
   PROGMEM Language_Str MSG_FILAMENT_CHANGE_HEADER          = _UxGT("FILAMENT CHANGE");

@@ -350,8 +350,8 @@
 // Offset of the extruders (uncomment if using more than one and relying on firmware to position when changing).
 // The offset has to be X=0, Y=0 for the extruder 0 hotend (default extruder).
 // For the other hotends it is their distance from the extruder 0 hotend.
-#define HOTEND_OFFSET_X { 0.0, 45.35 } // (mm) relative X-offset for each nozzle
-#define HOTEND_OFFSET_Y { 0.0, 38.68 }  // (mm) relative Y-offset for each nozzle
+#define HOTEND_OFFSET_X { 0.0, 0.0} // (mm) relative X-offset for each nozzle
+#define HOTEND_OFFSET_Y { 0.0, 0.0 }  // (mm) relative Y-offset for each nozzle
 #define HOTEND_OFFSET_Z { 0.0, 0.00 }  // (mm) relative Z-offset for each nozzle
 
 // @section machine
@@ -915,9 +915,9 @@
 /**
  * Default Axis Steps Per Unit (steps/mm)
  * Override with M92
- *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
+ *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[,56 E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 503.937, 140, 2000}//{ 100, 100, 503.937, 2000, 140}//1007.874
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 503.937, 56 , 1000}//{ 100, 100, 503.937, 2000, 140}//1007.874
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -937,7 +937,7 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 1000, 1000, 20, 10000,10000 }//{ 1000, 1000, 20, 10000,10000 }
+#define DEFAULT_MAX_ACCELERATION      { 500, 500, 20, 10000,10000 }//{ 1000, 1000, 20, 10000,10000 }
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -1054,7 +1054,7 @@
  * Use G29 repeatedly, adjusting the Z height at each point with movement commands
  * or (with LCD_BED_LEVELING) the LCD controller.
  */
-#define PROBE_MANUALLY
+//#define PROBE_MANUALLY
 
 /**
  * A Fix-Mounted Probe either doesn't deploy or needs manual deployment.
@@ -1322,7 +1322,7 @@
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
 #define INVERT_E0_DIR false//true
-#define INVERT_E1_DIR false
+#define INVERT_E1_DIR true
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
 #define INVERT_E4_DIR false
@@ -1528,7 +1528,7 @@
 //#define AUTO_BED_LEVELING_LINEAR
 //#define AUTO_BED_LEVELING_BILINEAR
 //#define AUTO_BED_LEVELING_UBL
-#define MESH_BED_LEVELING
+//#define MESH_BED_LEVELING
 
 /**
  * Normally G28 leaves leveling disabled on completion. Enable one of
@@ -1657,7 +1657,7 @@
  * Add a bed leveling sub-menu for ABL or MBL.
  * Include a guided procedure if manual probing is enabled.
  */
-#define LCD_BED_LEVELING
+//#define LCD_BED_LEVELING
 
 #if ENABLED(LCD_BED_LEVELING)
   #define MESH_EDIT_Z_STEP  0.025 // (mm) Step size while manually probing Z axis.
